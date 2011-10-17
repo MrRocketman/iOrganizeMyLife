@@ -12,15 +12,41 @@
 		1A9BC8C6144C9C0300F00E7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BC8C5144C9C0300F00E7C /* CoreGraphics.framework */; };
 		1A9BC8CC144C9C0300F00E7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8CA144C9C0300F00E7C /* InfoPlist.strings */; };
 		1A9BC8CE144C9C0300F00E7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC8CD144C9C0300F00E7C /* main.m */; };
-		1A9BC8D2144C9C0300F00E7C /* PBIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC8D1144C9C0300F00E7C /* PBIAppDelegate.m */; };
-		1A9BC8D5144C9C0300F00E7C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8D3144C9C0300F00E7C /* MainStoryboard_iPhone.storyboard */; };
-		1A9BC8D8144C9C0300F00E7C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8D6144C9C0300F00E7C /* MainStoryboard_iPad.storyboard */; };
-		1A9BC8DB144C9C0300F00E7C /* PBIFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC8DA144C9C0300F00E7C /* PBIFirstViewController.m */; };
-		1A9BC8DD144C9C0300F00E7C /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8DC144C9C0300F00E7C /* first.png */; };
-		1A9BC8DF144C9C0300F00E7C /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8DE144C9C0300F00E7C /* first@2x.png */; };
-		1A9BC8E2144C9C0300F00E7C /* PBISecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC8E1144C9C0300F00E7C /* PBISecondViewController.m */; };
-		1A9BC8E4144C9C0300F00E7C /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8E3144C9C0300F00E7C /* second.png */; };
-		1A9BC8E6144C9C0300F00E7C /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8E5144C9C0300F00E7C /* second@2x.png */; };
+		1A9BC8F4144CA15100F00E7C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8F3144CA15100F00E7C /* Default.png */; };
+		1A9BC8F6144CA15300F00E7C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8F5144CA15300F00E7C /* Default@2x.png */; };
+		1A9BC8F8144CA15500F00E7C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8F7144CA15500F00E7C /* Icon.png */; };
+		1A9BC8FA144CA15700F00E7C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8F9144CA15700F00E7C /* Icon@2x.png */; };
+		1A9BC90D144CA18D00F00E7C /* CalendarTab.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8FB144CA18D00F00E7C /* CalendarTab.tif */; };
+		1A9BC90E144CA18D00F00E7C /* CalendarTab@2x.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8FC144CA18D00F00E7C /* CalendarTab@2x.tif */; };
+		1A9BC90F144CA18D00F00E7C /* EmptySelection.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8FD144CA18D00F00E7C /* EmptySelection.tif */; };
+		1A9BC910144CA18D00F00E7C /* EmptySelection@2x.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8FE144CA18D00F00E7C /* EmptySelection@2x.tif */; };
+		1A9BC911144CA18D00F00E7C /* Garbage Can.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8FF144CA18D00F00E7C /* Garbage Can.tif */; };
+		1A9BC912144CA18D00F00E7C /* Garbage Can@2x.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC900144CA18D00F00E7C /* Garbage Can@2x.tif */; };
+		1A9BC913144CA18D00F00E7C /* GreenCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC901144CA18D00F00E7C /* GreenCircle.png */; };
+		1A9BC914144CA18D00F00E7C /* GreenCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC902144CA18D00F00E7C /* GreenCircle@2x.png */; };
+		1A9BC915144CA18D00F00E7C /* GreenCircleGreenDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC903144CA18D00F00E7C /* GreenCircleGreenDetail.png */; };
+		1A9BC916144CA18D00F00E7C /* GreenCircleGreenDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC904144CA18D00F00E7C /* GreenCircleGreenDetail@2x.png */; };
+		1A9BC917144CA18D00F00E7C /* MovingFolder.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC905144CA18D00F00E7C /* MovingFolder.tif */; };
+		1A9BC918144CA18D00F00E7C /* MovingFolder@2x.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC906144CA18D00F00E7C /* MovingFolder@2x.tif */; };
+		1A9BC919144CA18D00F00E7C /* OrganizeTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC907144CA18D00F00E7C /* OrganizeTab.png */; };
+		1A9BC91A144CA18D00F00E7C /* OrganizeTab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC908144CA18D00F00E7C /* OrganizeTab@2x.png */; };
+		1A9BC91B144CA18D00F00E7C /* Selected.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC909144CA18D00F00E7C /* Selected.tif */; };
+		1A9BC91C144CA18D00F00E7C /* Selected@2x.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC90A144CA18D00F00E7C /* Selected@2x.tif */; };
+		1A9BC91D144CA18D00F00E7C /* SettingsTab.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC90B144CA18D00F00E7C /* SettingsTab.tif */; };
+		1A9BC91E144CA18D00F00E7C /* SettingsTab@2x.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC90C144CA18D00F00E7C /* SettingsTab@2x.tif */; };
+		1A9BC922144CA1C900F00E7C /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC921144CA1C900F00E7C /* Data.m */; };
+		1A9BC92D144CA1EB00F00E7C /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC924144CA1EB00F00E7C /* CalendarViewController.m */; };
+		1A9BC92F144CA1EB00F00E7C /* OrganizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC928144CA1EB00F00E7C /* OrganizerViewController.m */; };
+		1A9BC930144CA1EB00F00E7C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC92A144CA1EB00F00E7C /* SettingsViewController.m */; };
+		1A9BC931144CA1EB00F00E7C /* TaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC92C144CA1EB00F00E7C /* TaskDetailViewController.m */; };
+		1A9BC938144CA27D00F00E7C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC932144CA27D00F00E7C /* MainWindow.xib */; };
+		1A9BC939144CA27D00F00E7C /* OrganizerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC933144CA27D00F00E7C /* OrganizerView.xib */; };
+		1A9BC93A144CA27D00F00E7C /* OrganizerMovingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC934144CA27D00F00E7C /* OrganizerMovingView.xib */; };
+		1A9BC93B144CA27D00F00E7C /* CalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC935144CA27D00F00E7C /* CalendarView.xib */; };
+		1A9BC93C144CA27D00F00E7C /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC936144CA27D00F00E7C /* SettingsView.xib */; };
+		1A9BC93D144CA27D00F00E7C /* TaskDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC937144CA27D00F00E7C /* TaskDetailView.xib */; };
+		1A9BC940144CA2D400F00E7C /* iOrganizeMyLifeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC93F144CA2D400F00E7C /* iOrganizeMyLifeAppDelegate.m */; };
+		1A9BC946144CAC7100F00E7C /* OrganizerMovingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BC945144CAC7100F00E7C /* OrganizerMovingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,22 +54,52 @@
 		1A9BC8C1144C9C0300F00E7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1A9BC8C3144C9C0300F00E7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1A9BC8C5144C9C0300F00E7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1A9BC8C9144C9C0300F00E7C /* iOrganizeMyLife-Info.plist */ = {isa = PBXFileReference; path = "iOrganizeMyLife-Info.plist"; sourceTree = "<group>"; };
+		1A9BC8C9144C9C0300F00E7C /* iOrganizeMyLife-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOrganizeMyLife-Info.plist"; sourceTree = "<group>"; };
 		1A9BC8CB144C9C0300F00E7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A9BC8CD144C9C0300F00E7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1A9BC8CF144C9C0300F00E7C /* iOrganizeMyLife-Prefix.pch */ = {isa = PBXFileReference; path = "iOrganizeMyLife-Prefix.pch"; sourceTree = "<group>"; };
-		1A9BC8D0144C9C0300F00E7C /* PBIAppDelegate.h */ = {isa = PBXFileReference; path = PBIAppDelegate.h; sourceTree = "<group>"; };
-		1A9BC8D1144C9C0300F00E7C /* PBIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBIAppDelegate.m; sourceTree = "<group>"; };
-		1A9BC8D4144C9C0300F00E7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		1A9BC8D7144C9C0300F00E7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		1A9BC8D9144C9C0300F00E7C /* PBIFirstViewController.h */ = {isa = PBXFileReference; path = PBIFirstViewController.h; sourceTree = "<group>"; };
-		1A9BC8DA144C9C0300F00E7C /* PBIFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBIFirstViewController.m; sourceTree = "<group>"; };
-		1A9BC8DC144C9C0300F00E7C /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		1A9BC8DE144C9C0300F00E7C /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		1A9BC8E0144C9C0300F00E7C /* PBISecondViewController.h */ = {isa = PBXFileReference; path = PBISecondViewController.h; sourceTree = "<group>"; };
-		1A9BC8E1144C9C0300F00E7C /* PBISecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBISecondViewController.m; sourceTree = "<group>"; };
-		1A9BC8E3144C9C0300F00E7C /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		1A9BC8E5144C9C0300F00E7C /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		1A9BC8CF144C9C0300F00E7C /* iOrganizeMyLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOrganizeMyLife-Prefix.pch"; sourceTree = "<group>"; };
+		1A9BC8F3144CA15100F00E7C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		1A9BC8F5144CA15300F00E7C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		1A9BC8F7144CA15500F00E7C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		1A9BC8F9144CA15700F00E7C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		1A9BC8FB144CA18D00F00E7C /* CalendarTab.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = CalendarTab.tif; sourceTree = "<group>"; };
+		1A9BC8FC144CA18D00F00E7C /* CalendarTab@2x.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "CalendarTab@2x.tif"; sourceTree = "<group>"; };
+		1A9BC8FD144CA18D00F00E7C /* EmptySelection.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = EmptySelection.tif; sourceTree = "<group>"; };
+		1A9BC8FE144CA18D00F00E7C /* EmptySelection@2x.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "EmptySelection@2x.tif"; sourceTree = "<group>"; };
+		1A9BC8FF144CA18D00F00E7C /* Garbage Can.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Garbage Can.tif"; sourceTree = "<group>"; };
+		1A9BC900144CA18D00F00E7C /* Garbage Can@2x.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Garbage Can@2x.tif"; sourceTree = "<group>"; };
+		1A9BC901144CA18D00F00E7C /* GreenCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCircle.png; sourceTree = "<group>"; };
+		1A9BC902144CA18D00F00E7C /* GreenCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenCircle@2x.png"; sourceTree = "<group>"; };
+		1A9BC903144CA18D00F00E7C /* GreenCircleGreenDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCircleGreenDetail.png; sourceTree = "<group>"; };
+		1A9BC904144CA18D00F00E7C /* GreenCircleGreenDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenCircleGreenDetail@2x.png"; sourceTree = "<group>"; };
+		1A9BC905144CA18D00F00E7C /* MovingFolder.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MovingFolder.tif; sourceTree = "<group>"; };
+		1A9BC906144CA18D00F00E7C /* MovingFolder@2x.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "MovingFolder@2x.tif"; sourceTree = "<group>"; };
+		1A9BC907144CA18D00F00E7C /* OrganizeTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrganizeTab.png; sourceTree = "<group>"; };
+		1A9BC908144CA18D00F00E7C /* OrganizeTab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrganizeTab@2x.png"; sourceTree = "<group>"; };
+		1A9BC909144CA18D00F00E7C /* Selected.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Selected.tif; sourceTree = "<group>"; };
+		1A9BC90A144CA18D00F00E7C /* Selected@2x.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Selected@2x.tif"; sourceTree = "<group>"; };
+		1A9BC90B144CA18D00F00E7C /* SettingsTab.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SettingsTab.tif; sourceTree = "<group>"; };
+		1A9BC90C144CA18D00F00E7C /* SettingsTab@2x.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "SettingsTab@2x.tif"; sourceTree = "<group>"; };
+		1A9BC920144CA1C900F00E7C /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		1A9BC921144CA1C900F00E7C /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		1A9BC923144CA1EB00F00E7C /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		1A9BC924144CA1EB00F00E7C /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		1A9BC927144CA1EB00F00E7C /* OrganizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizerViewController.h; sourceTree = "<group>"; };
+		1A9BC928144CA1EB00F00E7C /* OrganizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizerViewController.m; sourceTree = "<group>"; };
+		1A9BC929144CA1EB00F00E7C /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		1A9BC92A144CA1EB00F00E7C /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		1A9BC92B144CA1EB00F00E7C /* TaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskDetailViewController.h; sourceTree = "<group>"; };
+		1A9BC92C144CA1EB00F00E7C /* TaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskDetailViewController.m; sourceTree = "<group>"; };
+		1A9BC932144CA27D00F00E7C /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		1A9BC933144CA27D00F00E7C /* OrganizerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrganizerView.xib; sourceTree = "<group>"; };
+		1A9BC934144CA27D00F00E7C /* OrganizerMovingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrganizerMovingView.xib; sourceTree = "<group>"; };
+		1A9BC935144CA27D00F00E7C /* CalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarView.xib; sourceTree = "<group>"; };
+		1A9BC936144CA27D00F00E7C /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		1A9BC937144CA27D00F00E7C /* TaskDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskDetailView.xib; sourceTree = "<group>"; };
+		1A9BC93E144CA2D400F00E7C /* iOrganizeMyLifeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOrganizeMyLifeAppDelegate.h; sourceTree = "<group>"; };
+		1A9BC93F144CA2D400F00E7C /* iOrganizeMyLifeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOrganizeMyLifeAppDelegate.m; sourceTree = "<group>"; };
+		1A9BC944144CAC7100F00E7C /* OrganizerMovingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizerMovingViewController.h; sourceTree = "<group>"; };
+		1A9BC945144CAC7100F00E7C /* OrganizerMovingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizerMovingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,18 +146,12 @@
 		1A9BC8C7144C9C0300F00E7C /* iOrganizeMyLife */ = {
 			isa = PBXGroup;
 			children = (
-				1A9BC8D0144C9C0300F00E7C /* PBIAppDelegate.h */,
-				1A9BC8D1144C9C0300F00E7C /* PBIAppDelegate.m */,
-				1A9BC8D3144C9C0300F00E7C /* MainStoryboard_iPhone.storyboard */,
-				1A9BC8D6144C9C0300F00E7C /* MainStoryboard_iPad.storyboard */,
-				1A9BC8D9144C9C0300F00E7C /* PBIFirstViewController.h */,
-				1A9BC8DA144C9C0300F00E7C /* PBIFirstViewController.m */,
-				1A9BC8DC144C9C0300F00E7C /* first.png */,
-				1A9BC8DE144C9C0300F00E7C /* first@2x.png */,
-				1A9BC8E0144C9C0300F00E7C /* PBISecondViewController.h */,
-				1A9BC8E1144C9C0300F00E7C /* PBISecondViewController.m */,
-				1A9BC8E3144C9C0300F00E7C /* second.png */,
-				1A9BC8E5144C9C0300F00E7C /* second@2x.png */,
+				1A9BC93E144CA2D400F00E7C /* iOrganizeMyLifeAppDelegate.h */,
+				1A9BC93F144CA2D400F00E7C /* iOrganizeMyLifeAppDelegate.m */,
+				1A9BC91F144CA1B800F00E7C /* Data */,
+				1A9BC8F0144CA0E400F00E7C /* ViewControllers */,
+				1A9BC8F1144CA0F000F00E7C /* Views */,
+				1A9BC8F2144CA10000F00E7C /* Images */,
 				1A9BC8C8144C9C0300F00E7C /* Supporting Files */,
 			);
 			path = iOrganizeMyLife;
@@ -116,6 +166,98 @@
 				1A9BC8CF144C9C0300F00E7C /* iOrganizeMyLife-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A9BC8F0144CA0E400F00E7C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BC927144CA1EB00F00E7C /* OrganizerViewController.h */,
+				1A9BC928144CA1EB00F00E7C /* OrganizerViewController.m */,
+				1A9BC944144CAC7100F00E7C /* OrganizerMovingViewController.h */,
+				1A9BC945144CAC7100F00E7C /* OrganizerMovingViewController.m */,
+				1A9BC92B144CA1EB00F00E7C /* TaskDetailViewController.h */,
+				1A9BC92C144CA1EB00F00E7C /* TaskDetailViewController.m */,
+				1A9BC923144CA1EB00F00E7C /* CalendarViewController.h */,
+				1A9BC924144CA1EB00F00E7C /* CalendarViewController.m */,
+				1A9BC929144CA1EB00F00E7C /* SettingsViewController.h */,
+				1A9BC92A144CA1EB00F00E7C /* SettingsViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1A9BC8F1144CA0F000F00E7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BC932144CA27D00F00E7C /* MainWindow.xib */,
+				1A9BC933144CA27D00F00E7C /* OrganizerView.xib */,
+				1A9BC934144CA27D00F00E7C /* OrganizerMovingView.xib */,
+				1A9BC935144CA27D00F00E7C /* CalendarView.xib */,
+				1A9BC936144CA27D00F00E7C /* SettingsView.xib */,
+				1A9BC937144CA27D00F00E7C /* TaskDetailView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1A9BC8F2144CA10000F00E7C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BC941144CA2EA00F00E7C /* TabBar */,
+				1A9BC943144CA30500F00E7C /* App */,
+				1A9BC942144CA2FB00F00E7C /* System */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		1A9BC91F144CA1B800F00E7C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BC920144CA1C900F00E7C /* Data.h */,
+				1A9BC921144CA1C900F00E7C /* Data.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		1A9BC941144CA2EA00F00E7C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BC8FB144CA18D00F00E7C /* CalendarTab.tif */,
+				1A9BC8FC144CA18D00F00E7C /* CalendarTab@2x.tif */,
+				1A9BC907144CA18D00F00E7C /* OrganizeTab.png */,
+				1A9BC908144CA18D00F00E7C /* OrganizeTab@2x.png */,
+				1A9BC90B144CA18D00F00E7C /* SettingsTab.tif */,
+				1A9BC90C144CA18D00F00E7C /* SettingsTab@2x.tif */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		1A9BC942144CA2FB00F00E7C /* System */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BC8F9144CA15700F00E7C /* Icon@2x.png */,
+				1A9BC8F7144CA15500F00E7C /* Icon.png */,
+				1A9BC8F5144CA15300F00E7C /* Default@2x.png */,
+				1A9BC8F3144CA15100F00E7C /* Default.png */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		1A9BC943144CA30500F00E7C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BC8FD144CA18D00F00E7C /* EmptySelection.tif */,
+				1A9BC8FE144CA18D00F00E7C /* EmptySelection@2x.tif */,
+				1A9BC8FF144CA18D00F00E7C /* Garbage Can.tif */,
+				1A9BC900144CA18D00F00E7C /* Garbage Can@2x.tif */,
+				1A9BC901144CA18D00F00E7C /* GreenCircle.png */,
+				1A9BC902144CA18D00F00E7C /* GreenCircle@2x.png */,
+				1A9BC903144CA18D00F00E7C /* GreenCircleGreenDetail.png */,
+				1A9BC904144CA18D00F00E7C /* GreenCircleGreenDetail@2x.png */,
+				1A9BC905144CA18D00F00E7C /* MovingFolder.tif */,
+				1A9BC906144CA18D00F00E7C /* MovingFolder@2x.tif */,
+				1A9BC909144CA18D00F00E7C /* Selected.tif */,
+				1A9BC90A144CA18D00F00E7C /* Selected@2x.tif */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,12 +312,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A9BC8CC144C9C0300F00E7C /* InfoPlist.strings in Resources */,
-				1A9BC8D5144C9C0300F00E7C /* MainStoryboard_iPhone.storyboard in Resources */,
-				1A9BC8D8144C9C0300F00E7C /* MainStoryboard_iPad.storyboard in Resources */,
-				1A9BC8DD144C9C0300F00E7C /* first.png in Resources */,
-				1A9BC8DF144C9C0300F00E7C /* first@2x.png in Resources */,
-				1A9BC8E4144C9C0300F00E7C /* second.png in Resources */,
-				1A9BC8E6144C9C0300F00E7C /* second@2x.png in Resources */,
+				1A9BC8F4144CA15100F00E7C /* Default.png in Resources */,
+				1A9BC8F6144CA15300F00E7C /* Default@2x.png in Resources */,
+				1A9BC8F8144CA15500F00E7C /* Icon.png in Resources */,
+				1A9BC8FA144CA15700F00E7C /* Icon@2x.png in Resources */,
+				1A9BC90D144CA18D00F00E7C /* CalendarTab.tif in Resources */,
+				1A9BC90E144CA18D00F00E7C /* CalendarTab@2x.tif in Resources */,
+				1A9BC90F144CA18D00F00E7C /* EmptySelection.tif in Resources */,
+				1A9BC910144CA18D00F00E7C /* EmptySelection@2x.tif in Resources */,
+				1A9BC911144CA18D00F00E7C /* Garbage Can.tif in Resources */,
+				1A9BC912144CA18D00F00E7C /* Garbage Can@2x.tif in Resources */,
+				1A9BC913144CA18D00F00E7C /* GreenCircle.png in Resources */,
+				1A9BC914144CA18D00F00E7C /* GreenCircle@2x.png in Resources */,
+				1A9BC915144CA18D00F00E7C /* GreenCircleGreenDetail.png in Resources */,
+				1A9BC916144CA18D00F00E7C /* GreenCircleGreenDetail@2x.png in Resources */,
+				1A9BC917144CA18D00F00E7C /* MovingFolder.tif in Resources */,
+				1A9BC918144CA18D00F00E7C /* MovingFolder@2x.tif in Resources */,
+				1A9BC919144CA18D00F00E7C /* OrganizeTab.png in Resources */,
+				1A9BC91A144CA18D00F00E7C /* OrganizeTab@2x.png in Resources */,
+				1A9BC91B144CA18D00F00E7C /* Selected.tif in Resources */,
+				1A9BC91C144CA18D00F00E7C /* Selected@2x.tif in Resources */,
+				1A9BC91D144CA18D00F00E7C /* SettingsTab.tif in Resources */,
+				1A9BC91E144CA18D00F00E7C /* SettingsTab@2x.tif in Resources */,
+				1A9BC938144CA27D00F00E7C /* MainWindow.xib in Resources */,
+				1A9BC939144CA27D00F00E7C /* OrganizerView.xib in Resources */,
+				1A9BC93A144CA27D00F00E7C /* OrganizerMovingView.xib in Resources */,
+				1A9BC93B144CA27D00F00E7C /* CalendarView.xib in Resources */,
+				1A9BC93C144CA27D00F00E7C /* SettingsView.xib in Resources */,
+				1A9BC93D144CA27D00F00E7C /* TaskDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,9 +351,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A9BC8CE144C9C0300F00E7C /* main.m in Sources */,
-				1A9BC8D2144C9C0300F00E7C /* PBIAppDelegate.m in Sources */,
-				1A9BC8DB144C9C0300F00E7C /* PBIFirstViewController.m in Sources */,
-				1A9BC8E2144C9C0300F00E7C /* PBISecondViewController.m in Sources */,
+				1A9BC922144CA1C900F00E7C /* Data.m in Sources */,
+				1A9BC92D144CA1EB00F00E7C /* CalendarViewController.m in Sources */,
+				1A9BC92F144CA1EB00F00E7C /* OrganizerViewController.m in Sources */,
+				1A9BC930144CA1EB00F00E7C /* SettingsViewController.m in Sources */,
+				1A9BC931144CA1EB00F00E7C /* TaskDetailViewController.m in Sources */,
+				1A9BC940144CA2D400F00E7C /* iOrganizeMyLifeAppDelegate.m in Sources */,
+				1A9BC946144CAC7100F00E7C /* OrganizerMovingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,22 +372,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		1A9BC8D3144C9C0300F00E7C /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A9BC8D4144C9C0300F00E7C /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		1A9BC8D6144C9C0300F00E7C /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A9BC8D7144C9C0300F00E7C /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -228,7 +380,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -254,7 +406,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -276,6 +428,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOrganizeMyLife/iOrganizeMyLife-Prefix.pch";
 				INFOPLIST_FILE = "iOrganizeMyLife/iOrganizeMyLife-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -287,6 +440,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOrganizeMyLife/iOrganizeMyLife-Prefix.pch";
 				INFOPLIST_FILE = "iOrganizeMyLife/iOrganizeMyLife-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
