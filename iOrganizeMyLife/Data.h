@@ -8,11 +8,13 @@
 
 /*
  ################ Data Model #################
- * NSMutableDictionary *task; (Top level data object)
+ "iOrganzie.ioml"
+ * NSMutableDictionary *task; (Top level data object) "iOrganize.task"
     - NSNumber *priority;
     - NSString *title;
     - NSString *filePath;
     - NSMutableArray *subTaskFilePaths; (An Array of Tasks)
+        * FilePaths are given a numerical name. ie "1.task, 2.task"
  - NSNumber *versionNumber;
  */
 
@@ -29,6 +31,7 @@ enum kPriority
 
 @interface Data : NSObject
 {
+    // The top level data. ie "iOrganize.ioml"
     NSMutableDictionary *data;
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "OrganizerViewController.h"
-#import "iOrganize_My_LifeAppDelegate.h"
+#import "iOrganizeMyLifeAppDelegate.h"
 #import "TaskDetailViewController.h"
 
 #define DELETE_ACTION_SHEET_TAG 1
@@ -38,7 +38,7 @@
     if(self) 
     {
         // Custom initialization
-        [self setData:[(iOrganize_My_LifeAppDelegate *)[[UIApplication sharedApplication] delegate] data]];
+        [self setData:[(iOrganizeMyLifeAppDelegate *)[[UIApplication sharedApplication] delegate] data]];
         [self setTask:[self.data rootTask]];
     }
     
@@ -52,7 +52,7 @@
     
     if(!self.task)
     {
-        [self setData:[(iOrganize_My_LifeAppDelegate *)[[UIApplication sharedApplication] delegate] data]];
+        [self setData:[(iOrganizeMyLifeAppDelegate *)[[UIApplication sharedApplication] delegate] data]];
         [self setTask:[self.data rootTask]];
     }
     

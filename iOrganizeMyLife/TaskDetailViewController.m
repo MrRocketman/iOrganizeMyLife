@@ -7,7 +7,7 @@
 //
 
 #import "TaskDetailViewController.h"
-#import "iOrganize_My_LifeAppDelegate.h"
+#import "iOrganizeMyLifeAppDelegate.h"
 
 @implementation TaskDetailViewController
 
@@ -19,7 +19,7 @@
     if(self) 
     {
         // Custom initialization
-        self.data = [(iOrganize_My_LifeAppDelegate *)[[UIApplication sharedApplication] delegate] data];
+        self.data = [(iOrganizeMyLifeAppDelegate *)[[UIApplication sharedApplication] delegate] data];
     }
     return self;
 }
