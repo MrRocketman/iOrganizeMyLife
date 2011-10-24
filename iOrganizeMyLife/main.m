@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "PBIAppDelegate.h"
+#import "iOrganizeMyLifeAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([PBIAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([iOrganizeMyLifeAppDelegate class]));
     }
 }

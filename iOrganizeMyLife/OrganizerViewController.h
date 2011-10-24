@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Data.h"
 #import "OrganizerMovingViewController.h"
+#import "PriorityChangerViewController.h"
 
 
-@interface OrganizerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIActionSheetDelegate, OrganizerMovingViewControllerDelegate>
+@interface OrganizerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIActionSheetDelegate, OrganizerMovingViewControllerDelegate, PriorityChangerViewControllerDelegate>
 {
     IBOutlet UITableView *tableView;
     IBOutlet UIToolbar *toolbar;
@@ -19,6 +20,9 @@
     IBOutlet UIButton *newTaskBackgroundButton;
     IBOutlet UIView *newTaskView;
     IBOutlet UITextField *newTaskTextField;
+    
+    IBOutlet PriorityChangerViewController *priorityChanger;
+    int indexOfPriorityChangingTask;
     
     Data *data;
     NSMutableDictionary *task;
@@ -31,7 +35,11 @@
 @property(readwrite, retain) Data *data;
 @property(readwrite, retain) NSMutableDictionary *task;
 
+@property(readwrite, retain) PriorityChangerViewController *priorityChanger;
+
 - (IBAction)dismissNewTaskView:(id)sender;
 - (IBAction)newTaskTypeSelector:(id)sender;
+
+- (void)priorityButtonTapped:(id)sender;
 
 @end

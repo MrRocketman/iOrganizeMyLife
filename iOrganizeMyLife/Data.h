@@ -33,6 +33,7 @@ enum kPriority
 {
     // The top level data. ie "iOrganize.ioml"
     NSMutableDictionary *data;
+    NSMutableDictionary *rootTask;
 }
 
 // Main methods

@@ -7,11 +7,15 @@
 //
 
 #import "Data.h"
+#define LARGEST_NUMBER 9999
 
 
 @interface Data()
 
-- (NSString *)hiddenDocumentsDirectory;
+//- (void)moveAllFiles;
+//- (void)fixPermissionsForFilePath:(NSString *)path;
+//- (NSString *)hiddenDocumentsDirectory;
+- (NSString *)libraryDirectory;
 - (float)versionNumber;
 - (void)setVersionNumber:(float)versionNumber;
 
@@ -39,8 +43,61 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [data release];
+    [rootTask release];
+    [super dealloc];
+}
+
 #pragma mark - Private Methods
 
+/*
+- (void)moveAllFiles
+{
+    // Copy from private documents to library
+    NSError *error = nil;
+    NSString *filePath = [NSString stringWithFormat:@"%@/iOrganize.ioml", [self hiddenDocumentsDirectory]];
+    [[NSFileManager defaultManager] moveItemAtPath:filePath toPath:[[self libraryDirectory] stringByAppendingString:@"/iOrganize.ioml"] error:&error];
+    if(error)
+        NSLog(@"error 2:%@\n\n", error);
+    filePath = [NSString stringWithFormat:@"%@/iOrganize.task", [self hiddenDocumentsDirectory]];
+    [[NSFileManager defaultManager] moveItemAtPath:filePath toPath:[[self libraryDirectory] stringByAppendingString:@"/iOrganize.task"] error:&error];
+    if(error)
+        NSLog(@"error 4:%@\n\n", error);
+    filePath = [NSString stringWithFormat:@"%@/iOrganize", [self hiddenDocumentsDirectory]];
+    [[NSFileManager defaultManager] moveItemAtPath:filePath toPath:[[self libraryDirectory] stringByAppendingString:@"/iOrganize"] error:&error];
+    if(error)
+        NSLog(@"error 6:%@\n\n", error);
+    NSLog(@"Done copying");
+}
+ */
+
+/*
+- (void)fixPermissionsForFilePath:(NSString *)path
+{
+    NSFileManager *manager = [[[NSFileManager alloc] init] autorelease];
+    if ([manager fileExistsAtPath: path]) 
+    {
+        NSDictionary *attrib = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [NSNumber numberWithInt:0], NSFileGroupOwnerAccountID,
+                                [NSNumber numberWithInt:0], NSFileOwnerAccountID,
+                                @"root", NSFileGroupOwnerAccountName,
+                                @"root", NSFileOwnerAccountName, nil ];
+        NSError *error = nil;
+        [manager setAttributes:attrib ofItemAtPath:path error:&error];
+        
+        NSDirectoryEnumerator *dirEnum = [manager enumeratorAtPath: path];
+        NSString *file;
+        while (file = [dirEnum nextObject]) 
+        {
+            [manager setAttributes:attrib ofItemAtPath:[path stringByAppendingPathComponent:file] error:&error];
+        }
+    }
+}
+ */
+
+/*
 - (NSString *)hiddenDocumentsDirectory
 {
 	NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
@@ -67,6 +124,12 @@
     
 	return path;
 }
+ */
+
+- (NSString *)libraryDirectory
+{
+    return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
+}
 
 - (float)versionNumber
 {
@@ -80,18 +143,18 @@
 
 - (NSString *)nextAvailableNumberForSubtaskFilePath:(NSMutableDictionary *)task
 {
-    NSMutableArray *subtaskFilesPaths = [self subtaskFilePathsForTask:task];
     int currentNumber = -1;
-    int previousNumber = -1;
+    int previousNumbers[LARGEST_NUMBER] = {0};
     int largestNumber = -1;
-    int smallestNumber = 9999999;
+    int smallestNumber = LARGEST_NUMBER;
     int availableNumber = -1;
+    NSMutableArray *theSubtaskFilesPaths = [self subtaskFilePathsForTask:task];
     
-    for(int i = 0; i < [subtaskFilesPaths count]; i ++)
+    for(int i = 0; i < [theSubtaskFilesPaths count]; i ++)
     {
-        previousNumber = currentNumber;
         // Gives just the number of the file name without the extension
-        currentNumber = [[[[subtaskFilesPaths objectAtIndex:i] lastPathComponent] stringByDeletingPathExtension] intValue];
+        currentNumber = [[[[theSubtaskFilesPaths objectAtIndex:i] lastPathComponent] stringByDeletingPathExtension] intValue];
+        previousNumbers[currentNumber] = 1;
         
         // Check for the smallestNumber
         if(currentNumber < smallestNumber)
@@ -103,21 +166,28 @@
         {
             largestNumber = currentNumber;
         }
-        // Check for a number gap
-        if(previousNumber != -1 && currentNumber > previousNumber + 1)
-        {
-            availableNumber = previousNumber + 1;
-            break;
-        }
     }
     
     // Smallest numbers take priority
-    if(smallestNumber > 0)
+    if(smallestNumber < LARGEST_NUMBER && smallestNumber > 0)
     {
         availableNumber = smallestNumber - 1;
     }
-    // Gap numbers take next priority, and then finally the largest number
-    else if(availableNumber == -1)
+    // Gap numbers take next priority
+    if(availableNumber == -1)
+    {
+        for(int i = 0; i < largestNumber; i ++)
+        {
+            if(previousNumbers[i] == 0 && availableNumber == -1)
+            {
+                availableNumber = i;
+                // End the loop
+                i = largestNumber;
+            }
+        }
+    }
+    // And then finally the largest number
+    if(availableNumber == -1)
     {
         availableNumber = largestNumber + 1;
     }
@@ -163,24 +233,21 @@
 - (void)load
 {
     // This file contains info like the version number
-    NSString *filePath = [NSString stringWithFormat:@"%@/iOrganize.ioml", [self hiddenDocumentsDirectory]];
+    NSString *filePath = [NSString stringWithFormat:@"%@/iOrganize.ioml", [self libraryDirectory]];
     BOOL isDirectory = NO;
     
-    // Data has been saved before
+    // Read in the data
     if([[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDirectory]) 
     {
         data = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     }
-    // First time being opened
+    // First time being opened. Create the top level task
     else
     {
         data = [[NSMutableDictionary alloc] init];
         [self addSubtaskWithTitle:@"iOrganize" forTask:nil];
         [self setVersionNumber:VERSION_NUMBER];
         [data writeToFile:filePath atomically:YES];
-        //NSLog(@"data:%@", data);
-        //NSLog(@"main filePath:%@", filePath);
-        //NSLog(@"main save success:%d", success);
     }
 }
 
@@ -188,7 +255,12 @@
 
 - (NSMutableDictionary *)rootTask
 {
-    return [[NSMutableDictionary alloc] initWithContentsOfFile:[NSString stringWithFormat:@"%@/iOrganize.task", [self hiddenDocumentsDirectory]]];
+    if(!rootTask)
+    {
+        rootTask = [[NSMutableDictionary alloc] initWithContentsOfFile:[NSString stringWithFormat:@"%@/iOrganize.task", [self libraryDirectory]]];
+    }
+    
+    return rootTask;
 }
             
 - (int)priorityForTask:(NSMutableDictionary *)task
@@ -206,9 +278,7 @@
 - (NSMutableDictionary *)subtaskAtIndex:(int)index forTask:(NSMutableDictionary *)task
 {
     NSString *filePath = [self subtaskFilePathAtIndex:index forTask:task];
-    NSLog(@"data filePath:%@", filePath);
     NSMutableDictionary *subtask = [[[NSMutableDictionary alloc] initWithContentsOfFile:filePath] autorelease];
-    NSLog(@"data subtask:%@", subtask);
     return subtask;
 }
 
@@ -230,7 +300,7 @@
     // Top level task (iOrganize.task)
     if(task == nil)
     {
-        filePath = [NSString stringWithFormat:@"%@/%@.task", [self hiddenDocumentsDirectory], title];
+        filePath = [NSString stringWithFormat:@"%@/%@.task", [self libraryDirectory], title];
     }
     // All other tasks
     else
@@ -281,9 +351,10 @@
 - (void)deleteSubtaskAtIndex:(int)index forTask:(NSMutableDictionary *)task
 {
     // Delete the task file
-    [[NSFileManager defaultManager] removeItemAtPath:[self filePathForTask:[self subtaskAtIndex:index forTask:task]] error:NULL];
+    NSString *filePath = [self filePathForTask:[self subtaskAtIndex:index forTask:task]];
+    [[NSFileManager defaultManager] removeItemAtPath:filePath error:NULL];
     // Delete the associated folder and everything in the folder
-    [[NSFileManager defaultManager] removeItemAtPath:[[self filePathForTask:[self subtaskAtIndex:index forTask:task]] stringByDeletingPathExtension] error:NULL];
+    [[NSFileManager defaultManager] removeItemAtPath:[filePath stringByDeletingPathExtension] error:NULL];
     
     // Delete the filePath reference from the parent
     NSMutableArray *filePaths = [self subtaskFilePathsForTask:task];

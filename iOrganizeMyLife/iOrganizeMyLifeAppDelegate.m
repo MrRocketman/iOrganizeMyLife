@@ -70,6 +70,7 @@
 {
     [_window release];
     [_tabBarController release];
+    [data release];
     [super dealloc];
 }
 

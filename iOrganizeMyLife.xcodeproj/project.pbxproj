@@ -7,6 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3C36E8144E1D180080FB62 /* PriorityChangerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36E7144E1D180080FB62 /* PriorityChangerView.xib */; };
+		1A3C3700144E1F0C0080FB62 /* GreenCircleGreenDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36EC144E1F0C0080FB62 /* GreenCircleGreenDetail.png */; };
+		1A3C3701144E1F0C0080FB62 /* GreenCircleGreenDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36ED144E1F0C0080FB62 /* GreenCircleGreenDetail@2x.png */; };
+		1A3C3702144E1F0C0080FB62 /* GreenCircleRedDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36EE144E1F0C0080FB62 /* GreenCircleRedDetail.png */; };
+		1A3C3703144E1F0C0080FB62 /* GreenCircleRedDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36EF144E1F0C0080FB62 /* GreenCircleRedDetail@2x.png */; };
+		1A3C3704144E1F0C0080FB62 /* GreenCircleYelloDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36F0144E1F0C0080FB62 /* GreenCircleYelloDetail.png */; };
+		1A3C3705144E1F0C0080FB62 /* GreenCircleYelloDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36F1144E1F0C0080FB62 /* GreenCircleYelloDetail@2x.png */; };
+		1A3C3706144E1F0C0080FB62 /* Highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36F2144E1F0C0080FB62 /* Highlight.png */; };
+		1A3C3707144E1F0C0080FB62 /* Highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36F3144E1F0C0080FB62 /* Highlight@2x.png */; };
+		1A3C3708144E1F0C0080FB62 /* RedCircleGreenDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36F4144E1F0C0080FB62 /* RedCircleGreenDetail.png */; };
+		1A3C3709144E1F0C0080FB62 /* RedCircleGreenDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36F5144E1F0C0080FB62 /* RedCircleGreenDetail@2x.png */; };
+		1A3C370A144E1F0C0080FB62 /* RedCircleRedDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36F6144E1F0C0080FB62 /* RedCircleRedDetail.png */; };
+		1A3C370B144E1F0C0080FB62 /* RedCircleRedDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36F7144E1F0C0080FB62 /* RedCircleRedDetail@2x.png */; };
+		1A3C370C144E1F0C0080FB62 /* RedCircleYellowDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36F8144E1F0C0080FB62 /* RedCircleYellowDetail.png */; };
+		1A3C370D144E1F0C0080FB62 /* RedCircleYellowDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36F9144E1F0C0080FB62 /* RedCircleYellowDetail@2x.png */; };
+		1A3C370E144E1F0C0080FB62 /* YellowCircleGreenDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36FA144E1F0C0080FB62 /* YellowCircleGreenDetail.png */; };
+		1A3C370F144E1F0C0080FB62 /* YellowCircleGreenDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36FB144E1F0C0080FB62 /* YellowCircleGreenDetail@2x.png */; };
+		1A3C3710144E1F0C0080FB62 /* YellowCircleRedDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36FC144E1F0C0080FB62 /* YellowCircleRedDetail.png */; };
+		1A3C3711144E1F0C0080FB62 /* YellowCircleRedDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36FD144E1F0C0080FB62 /* YellowCircleRedDetail@2x.png */; };
+		1A3C3712144E1F0C0080FB62 /* YellowCircleYellowDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36FE144E1F0C0080FB62 /* YellowCircleYellowDetail.png */; };
+		1A3C3713144E1F0C0080FB62 /* YellowCircleYellowDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C36FF144E1F0C0080FB62 /* YellowCircleYellowDetail@2x.png */; };
+		1A3C371E144E21630080FB62 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3714144E21630080FB62 /* Checkmark.png */; };
+		1A3C371F144E21630080FB62 /* Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3715144E21630080FB62 /* Checkmark@2x.png */; };
+		1A3C3720144E21630080FB62 /* CheckmarkDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3716144E21630080FB62 /* CheckmarkDetail.png */; };
+		1A3C3721144E21630080FB62 /* CheckmarkDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3717144E21630080FB62 /* CheckmarkDetail@2x.png */; };
+		1A3C3722144E21630080FB62 /* GreenCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3718144E21630080FB62 /* GreenCircle.png */; };
+		1A3C3723144E21630080FB62 /* GreenCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C3719144E21630080FB62 /* GreenCircle@2x.png */; };
+		1A3C3724144E21630080FB62 /* RedCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C371A144E21630080FB62 /* RedCircle.png */; };
+		1A3C3725144E21630080FB62 /* RedCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C371B144E21630080FB62 /* RedCircle@2x.png */; };
+		1A3C3726144E21630080FB62 /* YellowCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C371C144E21630080FB62 /* YellowCircle.png */; };
+		1A3C3727144E21630080FB62 /* YellowCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C371D144E21630080FB62 /* YellowCircle@2x.png */; };
+		1A3C372A144E22360080FB62 /* PriorityChangerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C3729144E22360080FB62 /* PriorityChangerViewController.m */; };
+		1A3C372D144E285E0080FB62 /* OrganizerViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C372C144E285E0080FB62 /* OrganizerViewTableViewCell.m */; };
+		1A3C372F144E29DA0080FB62 /* OrganizerViewTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C372E144E29DA0080FB62 /* OrganizerViewTableViewCellView.xib */; };
 		1A9BC8C2144C9C0300F00E7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BC8C1144C9C0300F00E7C /* UIKit.framework */; };
 		1A9BC8C4144C9C0300F00E7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BC8C3144C9C0300F00E7C /* Foundation.framework */; };
 		1A9BC8C6144C9C0300F00E7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BC8C5144C9C0300F00E7C /* CoreGraphics.framework */; };
@@ -22,10 +56,6 @@
 		1A9BC910144CA18D00F00E7C /* EmptySelection@2x.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8FE144CA18D00F00E7C /* EmptySelection@2x.tif */; };
 		1A9BC911144CA18D00F00E7C /* Garbage Can.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC8FF144CA18D00F00E7C /* Garbage Can.tif */; };
 		1A9BC912144CA18D00F00E7C /* Garbage Can@2x.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC900144CA18D00F00E7C /* Garbage Can@2x.tif */; };
-		1A9BC913144CA18D00F00E7C /* GreenCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC901144CA18D00F00E7C /* GreenCircle.png */; };
-		1A9BC914144CA18D00F00E7C /* GreenCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC902144CA18D00F00E7C /* GreenCircle@2x.png */; };
-		1A9BC915144CA18D00F00E7C /* GreenCircleGreenDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC903144CA18D00F00E7C /* GreenCircleGreenDetail.png */; };
-		1A9BC916144CA18D00F00E7C /* GreenCircleGreenDetail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC904144CA18D00F00E7C /* GreenCircleGreenDetail@2x.png */; };
 		1A9BC917144CA18D00F00E7C /* MovingFolder.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC905144CA18D00F00E7C /* MovingFolder.tif */; };
 		1A9BC918144CA18D00F00E7C /* MovingFolder@2x.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC906144CA18D00F00E7C /* MovingFolder@2x.tif */; };
 		1A9BC919144CA18D00F00E7C /* OrganizeTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9BC907144CA18D00F00E7C /* OrganizeTab.png */; };
@@ -50,6 +80,42 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3C36E7144E1D180080FB62 /* PriorityChangerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriorityChangerView.xib; sourceTree = "<group>"; };
+		1A3C36EC144E1F0C0080FB62 /* GreenCircleGreenDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCircleGreenDetail.png; sourceTree = "<group>"; };
+		1A3C36ED144E1F0C0080FB62 /* GreenCircleGreenDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenCircleGreenDetail@2x.png"; sourceTree = "<group>"; };
+		1A3C36EE144E1F0C0080FB62 /* GreenCircleRedDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCircleRedDetail.png; sourceTree = "<group>"; };
+		1A3C36EF144E1F0C0080FB62 /* GreenCircleRedDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenCircleRedDetail@2x.png"; sourceTree = "<group>"; };
+		1A3C36F0144E1F0C0080FB62 /* GreenCircleYelloDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCircleYelloDetail.png; sourceTree = "<group>"; };
+		1A3C36F1144E1F0C0080FB62 /* GreenCircleYelloDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenCircleYelloDetail@2x.png"; sourceTree = "<group>"; };
+		1A3C36F2144E1F0C0080FB62 /* Highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Highlight.png; sourceTree = "<group>"; };
+		1A3C36F3144E1F0C0080FB62 /* Highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Highlight@2x.png"; sourceTree = "<group>"; };
+		1A3C36F4144E1F0C0080FB62 /* RedCircleGreenDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedCircleGreenDetail.png; sourceTree = "<group>"; };
+		1A3C36F5144E1F0C0080FB62 /* RedCircleGreenDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedCircleGreenDetail@2x.png"; sourceTree = "<group>"; };
+		1A3C36F6144E1F0C0080FB62 /* RedCircleRedDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedCircleRedDetail.png; sourceTree = "<group>"; };
+		1A3C36F7144E1F0C0080FB62 /* RedCircleRedDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedCircleRedDetail@2x.png"; sourceTree = "<group>"; };
+		1A3C36F8144E1F0C0080FB62 /* RedCircleYellowDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedCircleYellowDetail.png; sourceTree = "<group>"; };
+		1A3C36F9144E1F0C0080FB62 /* RedCircleYellowDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedCircleYellowDetail@2x.png"; sourceTree = "<group>"; };
+		1A3C36FA144E1F0C0080FB62 /* YellowCircleGreenDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowCircleGreenDetail.png; sourceTree = "<group>"; };
+		1A3C36FB144E1F0C0080FB62 /* YellowCircleGreenDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YellowCircleGreenDetail@2x.png"; sourceTree = "<group>"; };
+		1A3C36FC144E1F0C0080FB62 /* YellowCircleRedDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowCircleRedDetail.png; sourceTree = "<group>"; };
+		1A3C36FD144E1F0C0080FB62 /* YellowCircleRedDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YellowCircleRedDetail@2x.png"; sourceTree = "<group>"; };
+		1A3C36FE144E1F0C0080FB62 /* YellowCircleYellowDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowCircleYellowDetail.png; sourceTree = "<group>"; };
+		1A3C36FF144E1F0C0080FB62 /* YellowCircleYellowDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YellowCircleYellowDetail@2x.png"; sourceTree = "<group>"; };
+		1A3C3714144E21630080FB62 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
+		1A3C3715144E21630080FB62 /* Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkmark@2x.png"; sourceTree = "<group>"; };
+		1A3C3716144E21630080FB62 /* CheckmarkDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckmarkDetail.png; sourceTree = "<group>"; };
+		1A3C3717144E21630080FB62 /* CheckmarkDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckmarkDetail@2x.png"; sourceTree = "<group>"; };
+		1A3C3718144E21630080FB62 /* GreenCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCircle.png; sourceTree = "<group>"; };
+		1A3C3719144E21630080FB62 /* GreenCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenCircle@2x.png"; sourceTree = "<group>"; };
+		1A3C371A144E21630080FB62 /* RedCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedCircle.png; sourceTree = "<group>"; };
+		1A3C371B144E21630080FB62 /* RedCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedCircle@2x.png"; sourceTree = "<group>"; };
+		1A3C371C144E21630080FB62 /* YellowCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowCircle.png; sourceTree = "<group>"; };
+		1A3C371D144E21630080FB62 /* YellowCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YellowCircle@2x.png"; sourceTree = "<group>"; };
+		1A3C3728144E22360080FB62 /* PriorityChangerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityChangerViewController.h; sourceTree = "<group>"; };
+		1A3C3729144E22360080FB62 /* PriorityChangerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriorityChangerViewController.m; sourceTree = "<group>"; };
+		1A3C372B144E285E0080FB62 /* OrganizerViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizerViewTableViewCell.h; sourceTree = "<group>"; };
+		1A3C372C144E285E0080FB62 /* OrganizerViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizerViewTableViewCell.m; sourceTree = "<group>"; };
+		1A3C372E144E29DA0080FB62 /* OrganizerViewTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrganizerViewTableViewCellView.xib; sourceTree = "<group>"; };
 		1A9BC8BD144C9C0300F00E7C /* iOrganizeMyLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOrganizeMyLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9BC8C1144C9C0300F00E7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1A9BC8C3144C9C0300F00E7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,10 +134,6 @@
 		1A9BC8FE144CA18D00F00E7C /* EmptySelection@2x.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "EmptySelection@2x.tif"; sourceTree = "<group>"; };
 		1A9BC8FF144CA18D00F00E7C /* Garbage Can.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Garbage Can.tif"; sourceTree = "<group>"; };
 		1A9BC900144CA18D00F00E7C /* Garbage Can@2x.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Garbage Can@2x.tif"; sourceTree = "<group>"; };
-		1A9BC901144CA18D00F00E7C /* GreenCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCircle.png; sourceTree = "<group>"; };
-		1A9BC902144CA18D00F00E7C /* GreenCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenCircle@2x.png"; sourceTree = "<group>"; };
-		1A9BC903144CA18D00F00E7C /* GreenCircleGreenDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCircleGreenDetail.png; sourceTree = "<group>"; };
-		1A9BC904144CA18D00F00E7C /* GreenCircleGreenDetail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenCircleGreenDetail@2x.png"; sourceTree = "<group>"; };
 		1A9BC905144CA18D00F00E7C /* MovingFolder.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MovingFolder.tif; sourceTree = "<group>"; };
 		1A9BC906144CA18D00F00E7C /* MovingFolder@2x.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "MovingFolder@2x.tif"; sourceTree = "<group>"; };
 		1A9BC907144CA18D00F00E7C /* OrganizeTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrganizeTab.png; sourceTree = "<group>"; };
@@ -173,6 +235,10 @@
 			children = (
 				1A9BC927144CA1EB00F00E7C /* OrganizerViewController.h */,
 				1A9BC928144CA1EB00F00E7C /* OrganizerViewController.m */,
+				1A3C372B144E285E0080FB62 /* OrganizerViewTableViewCell.h */,
+				1A3C372C144E285E0080FB62 /* OrganizerViewTableViewCell.m */,
+				1A3C3728144E22360080FB62 /* PriorityChangerViewController.h */,
+				1A3C3729144E22360080FB62 /* PriorityChangerViewController.m */,
 				1A9BC944144CAC7100F00E7C /* OrganizerMovingViewController.h */,
 				1A9BC945144CAC7100F00E7C /* OrganizerMovingViewController.m */,
 				1A9BC92B144CA1EB00F00E7C /* TaskDetailViewController.h */,
@@ -190,10 +256,12 @@
 			children = (
 				1A9BC932144CA27D00F00E7C /* MainWindow.xib */,
 				1A9BC933144CA27D00F00E7C /* OrganizerView.xib */,
+				1A3C372E144E29DA0080FB62 /* OrganizerViewTableViewCellView.xib */,
+				1A3C36E7144E1D180080FB62 /* PriorityChangerView.xib */,
 				1A9BC934144CA27D00F00E7C /* OrganizerMovingView.xib */,
+				1A9BC937144CA27D00F00E7C /* TaskDetailView.xib */,
 				1A9BC935144CA27D00F00E7C /* CalendarView.xib */,
 				1A9BC936144CA27D00F00E7C /* SettingsView.xib */,
-				1A9BC937144CA27D00F00E7C /* TaskDetailView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -244,14 +312,40 @@
 		1A9BC943144CA30500F00E7C /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1A3C3714144E21630080FB62 /* Checkmark.png */,
+				1A3C3715144E21630080FB62 /* Checkmark@2x.png */,
+				1A3C3716144E21630080FB62 /* CheckmarkDetail.png */,
+				1A3C3717144E21630080FB62 /* CheckmarkDetail@2x.png */,
+				1A3C3718144E21630080FB62 /* GreenCircle.png */,
+				1A3C3719144E21630080FB62 /* GreenCircle@2x.png */,
+				1A3C371A144E21630080FB62 /* RedCircle.png */,
+				1A3C371B144E21630080FB62 /* RedCircle@2x.png */,
+				1A3C371C144E21630080FB62 /* YellowCircle.png */,
+				1A3C371D144E21630080FB62 /* YellowCircle@2x.png */,
+				1A3C36EC144E1F0C0080FB62 /* GreenCircleGreenDetail.png */,
+				1A3C36ED144E1F0C0080FB62 /* GreenCircleGreenDetail@2x.png */,
+				1A3C36EE144E1F0C0080FB62 /* GreenCircleRedDetail.png */,
+				1A3C36EF144E1F0C0080FB62 /* GreenCircleRedDetail@2x.png */,
+				1A3C36F0144E1F0C0080FB62 /* GreenCircleYelloDetail.png */,
+				1A3C36F1144E1F0C0080FB62 /* GreenCircleYelloDetail@2x.png */,
+				1A3C36F2144E1F0C0080FB62 /* Highlight.png */,
+				1A3C36F3144E1F0C0080FB62 /* Highlight@2x.png */,
+				1A3C36F4144E1F0C0080FB62 /* RedCircleGreenDetail.png */,
+				1A3C36F5144E1F0C0080FB62 /* RedCircleGreenDetail@2x.png */,
+				1A3C36F6144E1F0C0080FB62 /* RedCircleRedDetail.png */,
+				1A3C36F7144E1F0C0080FB62 /* RedCircleRedDetail@2x.png */,
+				1A3C36F8144E1F0C0080FB62 /* RedCircleYellowDetail.png */,
+				1A3C36F9144E1F0C0080FB62 /* RedCircleYellowDetail@2x.png */,
+				1A3C36FA144E1F0C0080FB62 /* YellowCircleGreenDetail.png */,
+				1A3C36FB144E1F0C0080FB62 /* YellowCircleGreenDetail@2x.png */,
+				1A3C36FC144E1F0C0080FB62 /* YellowCircleRedDetail.png */,
+				1A3C36FD144E1F0C0080FB62 /* YellowCircleRedDetail@2x.png */,
+				1A3C36FE144E1F0C0080FB62 /* YellowCircleYellowDetail.png */,
+				1A3C36FF144E1F0C0080FB62 /* YellowCircleYellowDetail@2x.png */,
 				1A9BC8FD144CA18D00F00E7C /* EmptySelection.tif */,
 				1A9BC8FE144CA18D00F00E7C /* EmptySelection@2x.tif */,
 				1A9BC8FF144CA18D00F00E7C /* Garbage Can.tif */,
 				1A9BC900144CA18D00F00E7C /* Garbage Can@2x.tif */,
-				1A9BC901144CA18D00F00E7C /* GreenCircle.png */,
-				1A9BC902144CA18D00F00E7C /* GreenCircle@2x.png */,
-				1A9BC903144CA18D00F00E7C /* GreenCircleGreenDetail.png */,
-				1A9BC904144CA18D00F00E7C /* GreenCircleGreenDetail@2x.png */,
 				1A9BC905144CA18D00F00E7C /* MovingFolder.tif */,
 				1A9BC906144CA18D00F00E7C /* MovingFolder@2x.tif */,
 				1A9BC909144CA18D00F00E7C /* Selected.tif */,
@@ -322,10 +416,6 @@
 				1A9BC910144CA18D00F00E7C /* EmptySelection@2x.tif in Resources */,
 				1A9BC911144CA18D00F00E7C /* Garbage Can.tif in Resources */,
 				1A9BC912144CA18D00F00E7C /* Garbage Can@2x.tif in Resources */,
-				1A9BC913144CA18D00F00E7C /* GreenCircle.png in Resources */,
-				1A9BC914144CA18D00F00E7C /* GreenCircle@2x.png in Resources */,
-				1A9BC915144CA18D00F00E7C /* GreenCircleGreenDetail.png in Resources */,
-				1A9BC916144CA18D00F00E7C /* GreenCircleGreenDetail@2x.png in Resources */,
 				1A9BC917144CA18D00F00E7C /* MovingFolder.tif in Resources */,
 				1A9BC918144CA18D00F00E7C /* MovingFolder@2x.tif in Resources */,
 				1A9BC919144CA18D00F00E7C /* OrganizeTab.png in Resources */,
@@ -340,6 +430,38 @@
 				1A9BC93B144CA27D00F00E7C /* CalendarView.xib in Resources */,
 				1A9BC93C144CA27D00F00E7C /* SettingsView.xib in Resources */,
 				1A9BC93D144CA27D00F00E7C /* TaskDetailView.xib in Resources */,
+				1A3C36E8144E1D180080FB62 /* PriorityChangerView.xib in Resources */,
+				1A3C3700144E1F0C0080FB62 /* GreenCircleGreenDetail.png in Resources */,
+				1A3C3701144E1F0C0080FB62 /* GreenCircleGreenDetail@2x.png in Resources */,
+				1A3C3702144E1F0C0080FB62 /* GreenCircleRedDetail.png in Resources */,
+				1A3C3703144E1F0C0080FB62 /* GreenCircleRedDetail@2x.png in Resources */,
+				1A3C3704144E1F0C0080FB62 /* GreenCircleYelloDetail.png in Resources */,
+				1A3C3705144E1F0C0080FB62 /* GreenCircleYelloDetail@2x.png in Resources */,
+				1A3C3706144E1F0C0080FB62 /* Highlight.png in Resources */,
+				1A3C3707144E1F0C0080FB62 /* Highlight@2x.png in Resources */,
+				1A3C3708144E1F0C0080FB62 /* RedCircleGreenDetail.png in Resources */,
+				1A3C3709144E1F0C0080FB62 /* RedCircleGreenDetail@2x.png in Resources */,
+				1A3C370A144E1F0C0080FB62 /* RedCircleRedDetail.png in Resources */,
+				1A3C370B144E1F0C0080FB62 /* RedCircleRedDetail@2x.png in Resources */,
+				1A3C370C144E1F0C0080FB62 /* RedCircleYellowDetail.png in Resources */,
+				1A3C370D144E1F0C0080FB62 /* RedCircleYellowDetail@2x.png in Resources */,
+				1A3C370E144E1F0C0080FB62 /* YellowCircleGreenDetail.png in Resources */,
+				1A3C370F144E1F0C0080FB62 /* YellowCircleGreenDetail@2x.png in Resources */,
+				1A3C3710144E1F0C0080FB62 /* YellowCircleRedDetail.png in Resources */,
+				1A3C3711144E1F0C0080FB62 /* YellowCircleRedDetail@2x.png in Resources */,
+				1A3C3712144E1F0C0080FB62 /* YellowCircleYellowDetail.png in Resources */,
+				1A3C3713144E1F0C0080FB62 /* YellowCircleYellowDetail@2x.png in Resources */,
+				1A3C371E144E21630080FB62 /* Checkmark.png in Resources */,
+				1A3C371F144E21630080FB62 /* Checkmark@2x.png in Resources */,
+				1A3C3720144E21630080FB62 /* CheckmarkDetail.png in Resources */,
+				1A3C3721144E21630080FB62 /* CheckmarkDetail@2x.png in Resources */,
+				1A3C3722144E21630080FB62 /* GreenCircle.png in Resources */,
+				1A3C3723144E21630080FB62 /* GreenCircle@2x.png in Resources */,
+				1A3C3724144E21630080FB62 /* RedCircle.png in Resources */,
+				1A3C3725144E21630080FB62 /* RedCircle@2x.png in Resources */,
+				1A3C3726144E21630080FB62 /* YellowCircle.png in Resources */,
+				1A3C3727144E21630080FB62 /* YellowCircle@2x.png in Resources */,
+				1A3C372F144E29DA0080FB62 /* OrganizerViewTableViewCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +480,8 @@
 				1A9BC931144CA1EB00F00E7C /* TaskDetailViewController.m in Sources */,
 				1A9BC940144CA2D400F00E7C /* iOrganizeMyLifeAppDelegate.m in Sources */,
 				1A9BC946144CAC7100F00E7C /* OrganizerMovingViewController.m in Sources */,
+				1A3C372A144E22360080FB62 /* PriorityChangerViewController.m in Sources */,
+				1A3C372D144E285E0080FB62 /* OrganizerViewTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +519,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -414,7 +538,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,6 +589,7 @@
 				1A9BC8EB144C9C0300F00E7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

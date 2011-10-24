@@ -9,8 +9,10 @@
 #import "OrganizerViewController.h"
 #import "iOrganizeMyLifeAppDelegate.h"
 #import "TaskDetailViewController.h"
+#import "OrganizerViewTableViewCell.h"
 
 #define DELETE_ACTION_SHEET_TAG 1
+#define PRIORITY_CHANGER_VIEW_TRANSITION_TIME 0.25
 
 
 @interface OrganizerViewController()
@@ -22,13 +24,14 @@
 - (void)keyboardSetup:(NSNotification *)notification;
 - (void)configureToolbarButtons;
 - (void)insertMovedRowsIntoTableView:(NSNotification *)notification;
+- (void)configureCell:(OrganizerViewTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
 
 @implementation OrganizerViewController
 
-@synthesize tableView, data, task;
+@synthesize tableView, data, task, priorityChanger;
 
 #pragma mark - ViewController Methods
 
@@ -66,6 +69,9 @@
     //[self.view addSubview:newTaskView];
     //[newTaskTextField setInputAccessoryView:newTaskView];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardSetup:) name:@"UIKeyboardWillShowNotification" object:nil];
+    
+    [priorityChanger setDelegate:self];
+    indexOfPriorityChangingTask = -1;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -135,7 +141,8 @@
     
     OrganizerMovingViewController *viewController = [[OrganizerMovingViewController alloc] initWithNibName:@"OrganizerMovingView" bundle:nil];
     // This makes the default location of the moving view the current view
-    [viewController setTask:task];
+    // This causes issues because then you can't get to the top level without making it confusing
+    //[viewController setTask:task];
     [viewController setSelectedTasks:selectedTasks];
     [viewController setParentTask:task];
     [viewController setDelegate:self];
@@ -188,6 +195,7 @@
                 [moveButton setEnabled:NO];
             }
             [toolbar setItems:[NSArray arrayWithObjects:flexibleSpace, deleteButton, flexibleSpace, moveButton, flexibleSpace, nil]];
+            [flexibleSpace release];
             [deleteButton release];
             [moveButton release];
         }
@@ -216,6 +224,62 @@
 - (IBAction)newTaskTypeSelector:(id)sender
 {
     
+}
+
+- (void)priorityButtonTapped:(id)sender
+{
+    indexOfPriorityChangingTask = [(OrganizerViewTableViewCell *)sender tag];
+    
+    // Normal view
+    if(![self.tableView isEditing])
+    {
+        // Add the overlay views
+        [self.view addSubview:priorityChanger.view];
+        [priorityChanger.view setCenter:CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2)];
+        [priorityChanger.view setAlpha:0.0];
+        [[priorityChanger label] setText:[data titleForTask:[data subtaskAtIndex:indexOfPriorityChangingTask forTask:task]]];
+        
+        [UIView animateWithDuration:PRIORITY_CHANGER_VIEW_TRANSITION_TIME
+                         animations:^{ 
+                             [priorityChanger.view setAlpha:1.0];
+                         }
+                         completion:NULL];
+    }
+    // Editing view
+    else
+    {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:indexOfPriorityChangingTask inSection:0];
+        if([selectedTasks containsObject:indexPath])
+        {
+            [selectedTasks removeObject:indexPath];
+        }
+        else
+        {
+            [selectedTasks addObject:indexPath];
+        }
+        [self configureToolbarButtons];
+        [self.tableView reloadData];
+    }
+}
+
+#pragma mark - PriorityChangerViewControllerDelegate
+
+- (void)didFinishWithPriority:(int)newPriority
+{
+    [data setPriority:newPriority forTask:[data subtaskAtIndex:indexOfPriorityChangingTask forTask:task]];
+    [self.tableView reloadData];
+    [self shouldDismiss];
+}
+
+- (void)shouldDismiss
+{
+    [UIView animateWithDuration:PRIORITY_CHANGER_VIEW_TRANSITION_TIME
+					 animations:^{ 
+						 [priorityChanger.view setAlpha:0.0];
+					 }
+					 completion:NULL];
+	
+    [NSTimer scheduledTimerWithTimeInterval:PRIORITY_CHANGER_VIEW_TRANSITION_TIME target:priorityChanger.view selector:@selector(removeFromSuperview) userInfo:nil repeats:NO];
 }
 
 #pragma mark - OrganizerMovingViewControllerDelegate Methods
@@ -332,41 +396,72 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    NSLog(@"subtaskCount:%d", [data subtaskCountForTask:task]);
-    NSLog(@"task:%@", [self task]);
     return [data subtaskCountForTask:task];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath 
+- (void)configureCell:(OrganizerViewTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSMutableDictionary *subtask = [data subtaskAtIndex:[indexPath row] forTask:task];
     
     // Update the cell
-    NSLog(@"subtask for cell %d: %@", [indexPath row], subtask);
-    NSLog(@"title for cell %d: %@", [indexPath row], [data titleForTask:subtask]);
-    [[cell textLabel] setText:[data titleForTask:subtask]];
+    [[cell title] setText:[data titleForTask:subtask]];
+    [[cell priorityButton] setTag:[indexPath row]];
+    [[cell priorityButton] addTarget:self action:@selector(priorityButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
+    // Cell selection
     if([self.tableView isEditing])
     {
         if([selectedTasks containsObject:indexPath])
         {
-            [[cell imageView] setImage:[UIImage imageNamed:@"Selected.tif"]];
+            [[cell priorityButton] setBackgroundImage:[UIImage imageNamed:@"Selected.tif"] forState:UIControlStateNormal];
         }
         else
         {
-            [[cell imageView] setImage:[UIImage imageNamed:@"EmptySelection.tif"]];
+            [[cell priorityButton] setBackgroundImage:[UIImage imageNamed:@"EmptySelection.tif"] forState:UIControlStateNormal];
         }
     }
+    // Priority images
     else
     {
-        // TODO: Show the priority
+        // Tasks without subtasks
         if([data subtaskCountForTask:[data subtaskAtIndex:[indexPath row] - [selectedTasks count] forTask:task]] < 1)
         {
-            [[cell imageView] setImage:[UIImage imageNamed:@"GreenCircle.png"]];
+            if([data priorityForTask:subtask] == kLow)
+            {
+                [[cell priorityButton] setBackgroundImage:[UIImage imageNamed:@"GreenCircle.png"] forState:UIControlStateNormal];
+            }
+            else if([data priorityForTask:subtask] == kMedium)
+            {
+                [[cell priorityButton] setBackgroundImage:[UIImage imageNamed:@"YellowCircle.png"] forState:UIControlStateNormal];
+            }
+            else if([data priorityForTask:subtask] == kHigh)
+            {
+                [[cell priorityButton] setBackgroundImage:[UIImage imageNamed:@"RedCircle.png"] forState:UIControlStateNormal];
+            }
+            else if([data priorityForTask:subtask] == kCheckmark)
+            {
+                [[cell priorityButton] setBackgroundImage:[UIImage imageNamed:@"Checkmark.png"] forState:UIControlStateNormal];
+            }
         }
+        // Tasks with subtasks
         else
         {
-            [[cell imageView] setImage:[UIImage imageNamed:@"GreenCircleGreenDetail.png"]];
+            if([data priorityForTask:subtask] == kLow)
+            {
+                [[cell priorityButton] setBackgroundImage:[UIImage imageNamed:@"GreenCircleGreenDetail.png"] forState:UIControlStateNormal];
+            }
+            else if([data priorityForTask:subtask] == kMedium)
+            {
+                [[cell priorityButton] setBackgroundImage:[UIImage imageNamed:@"YellowCircleYellowDetail.png"] forState:UIControlStateNormal];
+            }
+            else if([data priorityForTask:subtask] == kHigh)
+            {
+                [[cell priorityButton] setBackgroundImage:[UIImage imageNamed:@"RedCircleRedDetail.png"] forState:UIControlStateNormal];
+            }
+            else if([data priorityForTask:subtask] == kCheckmark)
+            {
+                [[cell priorityButton] setBackgroundImage:[UIImage imageNamed:@"CheckmarkDetail.png"] forState:UIControlStateNormal];
+            }
         }
         
         [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
@@ -378,13 +473,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     
-    static NSString *CellIdentifier = @"OrgainzerCell";
+    static NSString *CellIdentifier = @"OrganizerViewTableViewCell";
+    
+    OrganizerViewTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil)
+    {
+        //NSLog(@”New Cell Made”);
+        
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"OrganizerViewTableViewCellView" owner:nil options:nil];
+        
+        for(id currentObject in topLevelObjects)
+        {
+            if([currentObject isKindOfClass:[OrganizerViewTableViewCell class]])
+            {
+                cell = (OrganizerViewTableViewCell *)currentObject;
+                break;
+            }
+        }
+    }
+    
+    /*static NSString *CellIdentifier = @"OrgainzerCell";
     
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) 
     {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
-    }
+    }*/
 	
 	[self configureCell:cell atIndexPath:indexPath];
     
@@ -423,6 +538,11 @@
 }
 
 #pragma mark Table view delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 48.0;
+}
 
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
 {

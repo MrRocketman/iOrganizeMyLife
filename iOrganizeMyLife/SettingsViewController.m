@@ -10,6 +10,7 @@
 
 @interface SettingsViewController()
 
+- (NSString *)libraryDirectory;
 - (NSString *)hiddenDocumentsDirectory;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath ;
 
@@ -49,13 +50,14 @@
     // Top level viewController
     if([currentPath length] <= 0)
     {
-        self.currentPath = [self hiddenDocumentsDirectory];
+        self.currentPath = [self libraryDirectory];
     }
     // Files
     else if([[currentPath pathExtension] length] > 0)
     {
         NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:currentPath];
         NSLog(@"dictionary:%@", dictionary);
+        [dictionary release];
     }
     
     self.currentPathContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:currentPath error:NULL];
@@ -69,6 +71,11 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [theTableView reloadData];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
@@ -76,6 +83,11 @@
 }
 
 #pragma mark My Methods
+
+- (NSString *)libraryDirectory
+{
+    return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
+}
 
 - (NSString *)hiddenDocumentsDirectory
 {
