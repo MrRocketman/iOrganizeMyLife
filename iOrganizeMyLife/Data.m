@@ -15,8 +15,9 @@
 //- (void)moveAllFiles;
 //- (void)fixPermissionsForFilePath:(NSString *)path;
 //- (NSString *)hiddenDocumentsDirectory;
-- (void)changeAllFilesFilePaths;
+//- (void)changeAllFilesFilePaths;
 - (NSString *)libraryDirectory;
+- (NSString *)absoluteFilePathFromRelativeFilePath:(NSString *)filePath;
 - (float)versionNumber;
 - (void)setVersionNumber:(float)versionNumber;
 
@@ -132,6 +133,11 @@
     return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
 }
 
+- (NSString *)absoluteFilePathFromRelativeFilePath:(NSString *)filePath
+{
+    return [NSString stringWithFormat:@"%@/%@", [self libraryDirectory], filePath];
+}
+
 - (float)versionNumber
 {
     return [[data objectForKey:@"versionNumber"] floatValue];
@@ -225,7 +231,7 @@
 
 - (void)saveDataForTask:(NSMutableDictionary *)task
 {
-    [task writeToFile:[NSString stringWithFormat:@"%@/%@", [self libraryDirectory],[self filePathForTask:task]] atomically:YES];
+    [task writeToFile:[self absoluteFilePathFromRelativeFilePath:[self filePathForTask:task]] atomically:YES];
     //NSLog(@"save success:%d", success);
 }
 
@@ -234,7 +240,7 @@
 - (void)load
 {
     // This file contains info like the version number
-    NSString *filePath = [NSString stringWithFormat:@"%@/iOrganize.ioml", [self libraryDirectory]];
+    NSString *filePath = [self absoluteFilePathFromRelativeFilePath:@"iOrganize.ioml"];
     BOOL isDirectory = NO;
     
     // Read in the data
@@ -258,7 +264,7 @@
 {
     if(!rootTask)
     {
-        rootTask = [[NSMutableDictionary alloc] initWithContentsOfFile:[NSString stringWithFormat:@"%@/iOrganize.task", [self libraryDirectory]]];
+        rootTask = [[NSMutableDictionary alloc] initWithContentsOfFile:[self absoluteFilePathFromRelativeFilePath:@"iOrganize.task"]];
     }
     
     return rootTask;
@@ -278,7 +284,7 @@
 
 - (NSMutableDictionary *)subtaskAtIndex:(int)index forTask:(NSMutableDictionary *)task
 {
-    NSString *filePath = [NSString stringWithFormat:@"%@/%@", [self libraryDirectory], [self subtaskFilePathAtIndex:index forTask:task]];
+    NSString *filePath = [self absoluteFilePathFromRelativeFilePath:[self subtaskFilePathAtIndex:index forTask:task]];
     NSMutableDictionary *subtask = [[[NSMutableDictionary alloc] initWithContentsOfFile:filePath] autorelease];
     return subtask;
 }
@@ -301,7 +307,7 @@
     // Top level task (iOrganize.task)
     if(task == nil)
     {
-        filePath = [NSString stringWithFormat:@"%@/%@.task", [self libraryDirectory], title];
+        filePath = [self absoluteFilePathFromRelativeFilePath:title];
     }
     // All other tasks
     else
@@ -317,7 +323,7 @@
     
     // Create the folder
     NSError *error = nil;
-	if(![[NSFileManager defaultManager] createDirectoryAtPath:[filePath stringByDeletingPathExtension] withIntermediateDirectories:YES attributes:nil error:&error]) 
+	if(![[NSFileManager defaultManager] createDirectoryAtPath:[self absoluteFilePathFromRelativeFilePath:[filePath stringByDeletingPathExtension]] withIntermediateDirectories:YES attributes:nil error:&error])
     {
 		[NSException raise:@"Failed creating directory" format:@"[%@], %@", filePath, error];
 	}
@@ -353,9 +359,9 @@
 {
     // Delete the task file
     NSString *filePath = [self filePathForTask:[self subtaskAtIndex:index forTask:task]];
-    [[NSFileManager defaultManager] removeItemAtPath:filePath error:NULL];
+    [[NSFileManager defaultManager] removeItemAtPath:[self absoluteFilePathFromRelativeFilePath:filePath] error:NULL];
     // Delete the associated folder and everything in the folder
-    [[NSFileManager defaultManager] removeItemAtPath:[filePath stringByDeletingPathExtension] error:NULL];
+    [[NSFileManager defaultManager] removeItemAtPath:[self absoluteFilePathFromRelativeFilePath:[filePath stringByDeletingPathExtension]] error:NULL];
     
     // Delete the filePath reference from the parent
     NSMutableArray *filePaths = [self subtaskFilePathsForTask:task];
