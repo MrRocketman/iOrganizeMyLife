@@ -15,6 +15,7 @@
 //- (void)moveAllFiles;
 //- (void)fixPermissionsForFilePath:(NSString *)path;
 //- (NSString *)hiddenDocumentsDirectory;
+- (void)changeAllFilesFilePaths;
 - (NSString *)libraryDirectory;
 - (float)versionNumber;
 - (void)setVersionNumber:(float)versionNumber;
@@ -224,7 +225,7 @@
 
 - (void)saveDataForTask:(NSMutableDictionary *)task
 {
-    [task writeToFile:[self filePathForTask:task] atomically:YES];
+    [task writeToFile:[NSString stringWithFormat:@"%@/%@", [self libraryDirectory],[self filePathForTask:task]] atomically:YES];
     //NSLog(@"save success:%d", success);
 }
 
@@ -277,7 +278,7 @@
 
 - (NSMutableDictionary *)subtaskAtIndex:(int)index forTask:(NSMutableDictionary *)task
 {
-    NSString *filePath = [self subtaskFilePathAtIndex:index forTask:task];
+    NSString *filePath = [NSString stringWithFormat:@"%@/%@", [self libraryDirectory], [self subtaskFilePathAtIndex:index forTask:task]];
     NSMutableDictionary *subtask = [[[NSMutableDictionary alloc] initWithContentsOfFile:filePath] autorelease];
     return subtask;
 }
